@@ -2,7 +2,7 @@
 
 namespace Pong
 {
-    partial class Form1
+    partial class Platform
     {
         /// <summary>
         /// Required designer variable.
@@ -32,18 +32,30 @@ namespace Pong
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.paletka = new System.Windows.Forms.Panel();
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonGenerate = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.Controls.Add(this.paletka);
             this.panel1.Location = new System.Drawing.Point(-3, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(615, 451);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseCaptureChanged += new System.EventHandler(this.panel1_MouseCaptureChanged);
+            // 
+            // paletka
+            // 
+            this.paletka.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.paletka.Location = new System.Drawing.Point(216, 418);
+            this.paletka.Name = "paletka";
+            this.paletka.Size = new System.Drawing.Size(256, 20);
+            this.paletka.TabIndex = 0;
             // 
             // buttonStart
             // 
@@ -69,7 +81,7 @@ namespace Pong
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Form1
+            // Platform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -77,9 +89,9 @@ namespace Pong
             this.Controls.Add(this.buttonGenerate);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "Platform";
+            this.Text = "Platform";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -90,6 +102,7 @@ namespace Pong
         private Button buttonStart;
         private Button buttonGenerate;
         private Timer timer1;
+        private Panel paletka;
     }
 }
 

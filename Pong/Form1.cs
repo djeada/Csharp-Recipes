@@ -10,21 +10,25 @@ using System.Windows.Forms;
 
 namespace Pong
 {
-    public partial class Form1 : Form
+    public partial class Platform : Form
     {
-        bool flaga = true;
+        private bool flaga = true;
+        private bool dragging = false;
+
         List<Ball> listBalls = new List<Ball>();
 
-        public Form1()
+
+        public Platform()
         {
 
             InitializeComponent();
-        }
 
-        private void Form1_Load(object sender, EventArgs e)
+        }
+        private double ConvertToRadians(double angle)
         {
-
+            return (Math.PI / 180) * angle;
         }
+
 
         private void buttonStart_Click(object sender, EventArgs e){
 
@@ -43,6 +47,7 @@ namespace Pong
         {
             int dx = 0;
             int dy = 0;
+            Random rnd = new Random();
             foreach (Ball ball in listBalls)
             {
                 dx = ball.Left + Convert.ToInt32(ball.Vx);
@@ -72,7 +77,18 @@ namespace Pong
                     ball.Vy = ball.Vy * -1;
                 }
 
+                if (Math.Abs(dy - paletka.Top) < 50 && Math.Abs(dx - (paletka.Left +paletka.Width/2)) < paletka.Width/2)
+                {
+                    dy = dy - 50;
+                    ball.Vy = ball.Vy * - 1.1;
+                    ball.Vx = ball.Vx * (Math.Sin(ConvertToRadians(rnd.Next(0, 90))+0.5));
+                }
+                
                 ball.Location = new Point(dx, dy);
+            }
+            if (dragging)
+            {
+                paletka.Location = new Point(Cursor.Position.X, paletka.Top);
             }
 
         }
@@ -83,5 +99,17 @@ namespace Pong
             listBalls.Add(pileczka);
         }
 
+        private void panel1_MouseCaptureChanged(object sender, EventArgs e)
+        {
+            if (dragging)
+            {
+                dragging = false;
+
+            }
+            else
+            { 
+                dragging = true;
+            }
+        }
     }
 }
