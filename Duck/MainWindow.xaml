@@ -10,7 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\Adam\source\repos\Duck\kurka.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
-        <Label Content="Duck counter: 0/3" HorizontalAlignment="Left" Margin="43,10,0,0" VerticalAlignment="Top" Height="58" Width="308" FontSize="24" FontWeight="Bold" Foreground="Black"/>
+        <Label x:Name="display" Content="Duck counter: 0/3" HorizontalAlignment="Left" Margin="43,10,0,0" VerticalAlignment="Top" Height="58" Width="308" FontSize="24" FontWeight="Bold" Foreground="Black"/>
         <Rectangle Fill="Black" HorizontalAlignment="Left" Height="44" Margin="43,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="226" Opacity=".2"/>
         <Image x:Name="kaczka1" Source="C:\Users\Adam\source\repos\Duck\Duck.png" HorizontalAlignment="Left" Height="100" Margin="818,224,0,0" VerticalAlignment="Top" Width="100"/>
         <Image x:Name="kaczka2" Source="C:\Users\Adam\source\repos\Duck\Duck.png" HorizontalAlignment="Left" Height="100" Margin="775,119,0,0" VerticalAlignment="Top" Width="100"/>

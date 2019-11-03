@@ -22,6 +22,7 @@ namespace Duck
     {
         Random r = new Random();
         List<Image> kaczki = new List<Image>();
+        int counter = 0;
 
         public MainWindow()
         {
@@ -36,7 +37,29 @@ namespace Duck
             kaczki.Add(kaczka3);
         }
 
-        Point GetMousePos()
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            target.Margin = move(target.Margin, GetMousePos().X, GetMousePos().Y);
+
+            foreach (Image k in kaczki)
+            {
+                k.Margin = move(k.Margin, k.Margin.Left - 10, k.Margin.Top - r.Next(-5, 5));
+                if (checkColisions(target.Margin, k.Margin))
+                {
+                    k.Visibility = Visibility.Hidden;
+                    counter++;
+                    display.Content = "Duck counter: " + Convert.ToString(counter) + "/3";
+                }
+            }
+        }
+        Thickness move(Thickness old, double x, double y)
+        {
+            Thickness m = old;
+            m.Left = x;
+            m.Top = y;
+            return m;
+        }
+        private Point GetMousePos()
         {
             Point p = Mouse.GetPosition(Application.Current.MainWindow);
             p.X -= 50;
@@ -44,20 +67,18 @@ namespace Duck
             return p;
         }
 
-        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        bool checkColisions(Thickness m1, Thickness m2)
         {
-            Thickness m = target.Margin;
-            m.Left = GetMousePos().X;
-            m.Top = GetMousePos().Y;
-            target.Margin = m;
-
-            foreach (Image k in kaczki)
+            if(Math.Abs(center(m1).X - center(m2).X) < 20 & Math.Abs(center(m1).Y - center(m2).Y) < 20 & Mouse.LeftButton == MouseButtonState.Pressed)
             {
-                m = k.Margin;
-                m.Left -= 10;
-                m.Top -= r.Next(-5, 5);
-                k.Margin = m;
+                return true;
             }
+            return false;
+        }
+
+        Point center(Thickness m)
+        {
+            return new Point((m.Top - m.Bottom) / 2, (m.Left - m.Right) / 2);
         }
     }
 }
