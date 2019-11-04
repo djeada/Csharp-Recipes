@@ -22,6 +22,7 @@ namespace Duck
     {
         Random r = new Random();
         List<Image> kaczki = new List<Image>();
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
         int counter = 0;
 
         public MainWindow()
@@ -35,6 +36,7 @@ namespace Duck
             kaczki.Add(kaczka1);
             kaczki.Add(kaczka2);
             kaczki.Add(kaczka3);
+            player.SoundLocation = @"C:\Users\Adam\source\repos\Duck\gun.wav";
         }
 
         private void dispatcherTimer_Tick(object sender, EventArgs e)
@@ -48,9 +50,17 @@ namespace Duck
                 {
                     k.Visibility = Visibility.Hidden;
                     counter++;
+                    if (counter > 3){
+                        counter = 3;
+                    }
                     display.Content = "Duck counter: " + Convert.ToString(counter) + "/3";
                 }
             }
+            if (Mouse.LeftButton == MouseButtonState.Pressed)
+            {
+                player.Play();
+            }
+
         }
         Thickness move(Thickness old, double x, double y)
         {
