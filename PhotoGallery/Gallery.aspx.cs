@@ -26,6 +26,8 @@ namespace PhotoGallery
                         string photoFolder = Path.Combine(Server.MapPath("~/Photos/"), User.Identity.Name);
                         if (Directory.Exists(photoFolder))
                         {
+                            DisplayUploadedPhotos(photoFolder);
+
                             string full_file_path = photoFolder + Path.GetFileNameWithoutExtension(myFileUpload.FileName) + Path.GetExtension(myFileUpload.FileName);
                             myFileUpload.SaveAs(full_file_path);
                             statusLabel.Text = "<font color='green'> File uploaded sucessfully";
@@ -52,6 +54,19 @@ namespace PhotoGallery
                 statusLabel.Text = "<font color='red'>  No file has been selected";
             }
 
+        }
+        public void DisplayUploadedPhotos(string folder)
+        {
+            string[] allPhotoFiles = Directory.GetFiles(folder);
+            IList<string> allPhotoPaths = new List<string>();
+            string fileName;
+            foreach (string f in allPhotoFiles)
+            {
+                fileName = Path.GetFileName(f);
+                allPhotoPaths.Add("~/Photos/" + User.Identity.Name + "/" + fileName);
+            }
+            RepeaterUserPhoto.DataSource = allPhotoPaths;
+            RepeaterUserPhoto.DataBind();
         }
     }
 }
