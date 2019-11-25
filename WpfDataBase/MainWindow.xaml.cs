@@ -58,7 +58,7 @@ namespace WpfDataBase
             string name = "'" + nameText.Text + "'";
             string surname = "'" + surnameText.Text + "'";
             string phone = "'" + phoneText.Text + "'";
-            string query = String.Format("DELETE FROM Persons Where Name={0} AND Surname={1} AND Phone={2})", name, surname, phone);
+            string query = String.Format("DELETE FROM Persons Where Name={0} AND Surname={1} AND Number={2}", name, surname, phone);
             SqlCommand command = new SqlCommand(query, conn);
             command.ExecuteNonQuery();
         }
