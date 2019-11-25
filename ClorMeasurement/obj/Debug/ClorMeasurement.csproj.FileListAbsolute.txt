@@ -1,0 +1,7 @@
+C:\Users\Adam\source\repos\ClorMeasurement\ClorMeasurement\bin\Debug\ClorMeasurement.exe.config
+C:\Users\Adam\source\repos\ClorMeasurement\ClorMeasurement\bin\Debug\ClorMeasurement.exe
+C:\Users\Adam\source\repos\ClorMeasurement\ClorMeasurement\bin\Debug\ClorMeasurement.pdb
+C:\Users\Adam\source\repos\ClorMeasurement\ClorMeasurement\obj\Debug\ClorMeasurement.csprojAssemblyReference.cache
+C:\Users\Adam\source\repos\ClorMeasurement\ClorMeasurement\obj\Debug\ClorMeasurement.csproj.CoreCompileInputs.cache
+C:\Users\Adam\source\repos\ClorMeasurement\ClorMeasurement\obj\Debug\ClorMeasurement.exe
+C:\Users\Adam\source\repos\ClorMeasurement\ClorMeasurement\obj\Debug\ClorMeasurement.pdb
