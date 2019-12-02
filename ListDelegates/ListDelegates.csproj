@@ -43,8 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DisplayChanges.cs" />
+    <Compile Include="ListEventArgs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublisherList.cs" />
+    <Compile Include="SaveToFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
