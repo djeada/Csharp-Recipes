@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace LINQarrays
 {
@@ -127,6 +128,31 @@ namespace LINQarrays
             }
             Console.WriteLine("");
             Console.WriteLine("****** Task [6] ******");
+
+            studentenVonWarschauUndSeattle =  mySchool.students.Where(student =>student.City == "Warsaw" || student.City == "Seattle").Select(student => new Student {City = student.City, First = student.First, Last = student.Last });
+
+            foreach (var student in studentenVonWarschauUndSeattle)
+            {
+                System.Console.WriteLine("{0} {1} {2} ", student.First, student.Last, student.City);
+            }
+
+            var q1 = mySchool.students.Where(student => student.City == "Warsaw").Select(student => new  { First = student.First, Last = student.Last }).Concat(mySchool.teachers.Where(teacher => teacher.City == "Warsaw").Select(teacher => new  { First = teacher.First, Last = teacher.Last }));
+            foreach (var x in q1)
+            {
+                Console.WriteLine("{0} ", x);
+            }
+            Console.WriteLine("");
+            Console.WriteLine("****** Task [7] ******");
+            var studentsToXML = new XElement("Root", from student in mySchool.students
+                                                     let x = String.Format("{0},{1},{2},{3}", 
+                                                     student.Scores[0], student.Scores[1], student.Scores[2], student.Scores[3])
+                                                     select new XElement("student", new XElement("First", student.First), 
+                                                     new XElement("Last", student.Last), 
+                                                     new XElement("Scores", x)) 
+                                                     );
+        
+            Console.WriteLine(studentsToXML); 
+
 
 
             Console.WriteLine("");
