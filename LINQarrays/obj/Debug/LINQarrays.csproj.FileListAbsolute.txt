@@ -1,7 +1,0 @@
-C:\Users\Adam\source\repos\LINQarrays\LINQarrays\bin\Debug\LINQarrays.exe.config
-C:\Users\Adam\source\repos\LINQarrays\LINQarrays\bin\Debug\LINQarrays.exe
-C:\Users\Adam\source\repos\LINQarrays\LINQarrays\bin\Debug\LINQarrays.pdb
-C:\Users\Adam\source\repos\LINQarrays\LINQarrays\obj\Debug\LINQarrays.csprojAssemblyReference.cache
-C:\Users\Adam\source\repos\LINQarrays\LINQarrays\obj\Debug\LINQarrays.csproj.CoreCompileInputs.cache
-C:\Users\Adam\source\repos\LINQarrays\LINQarrays\obj\Debug\LINQarrays.exe
-C:\Users\Adam\source\repos\LINQarrays\LINQarrays\obj\Debug\LINQarrays.pdb
