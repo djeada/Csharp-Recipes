@@ -9,3 +9,5 @@ Project based tutorials in C#.
   - [LINQ arrays](https://github.com/djeada/Csharp-recipes/tree/main/src/LINQarrays_Project). An example of LINQ arrays.
   - [List delegates](https://github.com/djeada/Csharp-recipes/tree/main/src/ListDelegates_Project). An example of list delegates.
   - [Threads](https://github.com/djeada/Csharp-recipes/tree/main/src/Threads_Project). A simple multithreaded program.
+  - [DB with WPF](https://github.com/djeada/Csharp-recipes/tree/main/src/Threads_Project). WPF gui for a database.
+  - [Photo gallery](https://github.com/djeada/Csharp-recipes/tree/main/src/PhotoGallery_Project). Photo gallery with ASP.NET backend.
