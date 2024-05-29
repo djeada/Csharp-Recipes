@@ -1,13 +1,22 @@
-# Csharp-recipes
-Project based tutorials in C#.
+# Csharp-Recipes
 
-<h1>Table of contents</h1>
+A collection of project-based tutorials in C# designed to teach and demonstrate various programming concepts and techniques.
 
-  - [Pong](https://github.com/djeada/Csharp-recipes/tree/main/src/Pong_Project). An implementation of the classic pong game.
-  - [Duck shooter](https://github.com/djeada/Csharp-recipes/tree/main/src/Duck_Project). A simple game. Player shoots flying ducks.
-  - [Clor measurements](https://github.com/djeada/Csharp-recipes/tree/main/src/ClorMeasurement_Project). Classes in pracitce.
-  - [LINQ arrays](https://github.com/djeada/Csharp-recipes/tree/main/src/LINQarrays_Project). An example of LINQ arrays.
-  - [List delegates](https://github.com/djeada/Csharp-recipes/tree/main/src/ListDelegates_Project). An example of list delegates.
-  - [Threads](https://github.com/djeada/Csharp-recipes/tree/main/src/Threads_Project). A simple multithreaded program.
-  - [DB with WPF](https://github.com/djeada/Csharp-recipes/tree/main/src/Threads_Project). WPF gui for a database.
-  - [Photo gallery](https://github.com/djeada/Csharp-recipes/tree/main/src/PhotoGallery_Project). Photo gallery with ASP.NET backend.
+## Table of Contents
+
+1. [Pong](https://github.com/djeada/Csharp-recipes/tree/main/src/Pong_Project)
+   - An implementation of the classic Pong game.
+2. [Duck Shooter](https://github.com/djeada/Csharp-recipes/tree/main/src/Duck_Project)
+   - A simple game where the player shoots flying ducks.
+3. [Chlorine Measurements](https://github.com/djeada/Csharp-recipes/tree/main/src/ClorMeasurement_Project)
+   - Practical use of classes for measuring chlorine levels.
+4. [LINQ Arrays](https://github.com/djeada/Csharp-recipes/tree/main/src/LINQarrays_Project)
+   - Examples demonstrating the use of LINQ with arrays.
+5. [List Delegates](https://github.com/djeada/Csharp-recipes/tree/main/src/ListDelegates_Project)
+   - An example showcasing the use of delegates with lists.
+6. [Threads](https://github.com/djeada/Csharp-recipes/tree/main/src/Threads_Project)
+   - A simple multithreaded program demonstrating threading concepts.
+7. [Database with WPF](https://github.com/djeada/Csharp-recipes/tree/main/src/DB_WPF_Project)
+   - A WPF GUI for interacting with a database.
+8. [Photo Gallery](https://github.com/djeada/Csharp-recipes/tree/main/src/PhotoGallery_Project)
+   - A photo gallery application with an ASP.NET backend.
